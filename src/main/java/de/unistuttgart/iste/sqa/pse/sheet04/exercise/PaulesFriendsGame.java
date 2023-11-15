@@ -2,7 +2,9 @@ package de.unistuttgart.iste.sqa.pse.sheet04.exercise;
 
 import de.hamstersimulator.objectsfirst.datatypes.Direction;
 import de.hamstersimulator.objectsfirst.datatypes.Location;
+import de.hamstersimulator.objectsfirst.external.model.Hamster;
 import de.hamstersimulator.objectsfirst.external.model.Territory;
+import de.hamstersimulator.objectsfirst.external.model.TerritoryBuilder;
 
 /**
  * In this hamster-game {@code paule} gets two new friends.
@@ -18,23 +20,23 @@ public class PaulesFriendsGame extends InternalPaulesFriendsGame {
 	 */
 	void createPaulesFriends() {
 	
-		// TODO initialize variables below with values according to exercise 1 of sheet 4
-		
+
 		// Local variables for Ronnie
-		Location locationRonnie;
-		Direction directionRonnie;
-		Territory territoryRonnie;
-		Integer grainCountRonnie;
+		Location locationRonnie = Location.from(7, 7);
+		Direction directionRonnie = Direction.NORTH;
+		Territory territoryRonnie = game.getTerritory();
+		Integer grainCountRonnie = 16;
 		
 		// Local variables for Paula
-		Location locationPaula;
-		Direction directionPaula;
-		Territory territoryPaula;
-		Integer grainCountPaula;
+		Location locationPaula = Location.from(7, 0);
+		Direction directionPaula = Direction.EAST;
+		Territory territoryPaula = game.getTerritory();
+		Integer grainCountPaula = 12;
 		
-		// TODO create hamsters according to exercise 1 of sheet 4
+		Hamster Ronnie = new Hamster(territoryRonnie, locationRonnie, directionRonnie, 16);
+		Hamster Paula = new Hamster(territoryPaula, locationPaula, directionPaula, 12);
 
-				
+
 
 		// Hint: Be careful with the location of the new hamsters
 	}
